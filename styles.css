@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.business-card {
+    width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name-title h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.name-title p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align logos to the start */
+    position: relative;
+    /* margin-top: -30px; Adjust this value to match the alignment */
+}
+
+.logo {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.top-employer-logo {
+    height: 53px;
+    position: absolute;
+    left: 77px; /* Adjust this value until aligned under "H" */
+    top: 50px; /* Adjust this value to control spacing from Hyundai logo */
+}
+
+/* .logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.top-employer-logo {
+    height: 40px;
+} */
+
+.contact-info {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info p strong {
+    display: inline-block;
+    width: 20px; /* Adjust width to control space between the label and content */
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
