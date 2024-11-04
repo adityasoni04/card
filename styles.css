@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'Hyundai Sans Head Office';
+    src: url('fonts/HyundaiSansHeadOffice-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Hyundai Sans Head Office', Arial, sans-serif;
+
 }
 
 body {
@@ -13,13 +21,15 @@ body {
     background-color: #f3f3f3;
 }
 
-.business-card {
-    width: 600px;
+.email-signature {
+    width: 100%;
+    max-width: 900px;
     background: white;
     border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .header {
@@ -29,51 +39,30 @@ body {
     margin-bottom: 20px;
 }
 
-.name-title h1 {
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
 .name-title p {
     font-size: 1em;
     color: #666;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 .logos {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align logos to the start */
+    align-items: flex-start;
     position: relative;
-    /* margin-top: -30px; Adjust this value to match the alignment */
 }
 
 .logo {
-    height: 70px;
+    height: 75px;
     margin-bottom: 10px;
 }
 
 .top-employer-logo {
-    height: 53px;
+    height: 57px;
     position: absolute;
-    left: 77px; /* Adjust this value until aligned under "H" */
-    top: 50px; /* Adjust this value to control spacing from Hyundai logo */
+    left: 84px;
+    top: 55px;
 }
-
-/* .logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo {
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.top-employer-logo {
-    height: 40px;
-} */
 
 .contact-info {
     font-size: 0.95em;
@@ -87,7 +76,7 @@ body {
 
 .contact-info p strong {
     display: inline-block;
-    width: 20px; /* Adjust width to control space between the label and content */
+    width: 20px;
 }
 
 .footer {
@@ -101,3 +90,101 @@ body {
     border-radius: 6px;
 }
 
+.editable-input {
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.width-nt {
+    width: 100%;  /* name-title input width */
+}
+
+.width-ci {
+    width: 70%;   /* contact-info input width */
+}
+
+.editable-input:focus {
+    outline: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.name-input {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.title-input {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .email-signature {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .name-input {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 8px;
+    }
+
+    .top-employer-logo {
+        height: 50px;
+        left: 70px;
+        top: 50px;
+    }
+
+    .contact-info {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .email-signature {
+        padding: 10px;
+    }
+
+    .name-input {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .top-employer-logo {
+        height: 45px;
+        left: 60px;
+        top: 45px;
+    }
+
+    .contact-info {
+        font-size: 0.85em;
+    }
+
+    .width-ci {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
